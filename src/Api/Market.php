@@ -2,8 +2,6 @@
 
 namespace Humble23\CartolaFcClient\Api;
 
-use Humble23\CartolaFcClient\Api\Api;
-
 class Market extends Api
 {
     public function status()

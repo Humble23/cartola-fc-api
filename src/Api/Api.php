@@ -24,7 +24,7 @@ class Api
     public function get(string $uri, array $query = [])
     {
         $response = $this->client->getHttpClient()->request('GET', $uri, [
-            'query' => $query
+            'query' => $query,
         ]);
         $this->client->setLastResponse($response);
         $response = (new ResponseTransform($this->client))
