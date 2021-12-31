@@ -2,8 +2,6 @@
 
 namespace Humble23\CartolaFcClient\Api;
 
-use Humble23\CartolaFcClient\Api\Api;
-
 class Game extends Api
 {
     /**
@@ -49,7 +47,7 @@ class Game extends Api
     /**
      * Check if the game is over.
      *
-     * @return boolean
+     * @return bool
      */
     public function isGameOver()
     {
@@ -61,7 +59,7 @@ class Game extends Api
     /**
      * Get the current game round.
      *
-     * @return integer
+     * @return int
      */
     public function currentRound()
     {
