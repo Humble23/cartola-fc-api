@@ -1,5 +1,7 @@
 # PHP API client for cartola fc
 
+<!-- https://api.cartolafc.globo.com/atletas/pontuados/{rodada} -->
+
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/humble23/cartola-fc-api.svg?style=flat-square)](https://packagist.org/packages/humble23/cartola-fc-api)
 [![Tests](https://github.com/humble23/cartola-fc-api/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/humble23/cartola-fc-api/actions/workflows/run-tests.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/humble23/cartola-fc-api.svg?style=flat-square)](https://packagist.org/packages/humble23/cartola-fc-api)
