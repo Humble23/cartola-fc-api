@@ -3,6 +3,7 @@
 namespace Humble23\CartolaFcClient;
 
 use GuzzleHttp\Client;
+use Humble23\CartolaFcClient\Api\Teams;
 use Humble23\CartolaFcClient\Api\Market;
 
 class CartolaClient
@@ -45,5 +46,10 @@ class CartolaClient
     public function market()
     {
         return (new Market($this));
+    }
+
+    public function teams()
+    {
+        return (new Teams($this));
     }
 }

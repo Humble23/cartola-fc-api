@@ -4,16 +4,16 @@ namespace Humble23\CartolaFcClient\Api;
 
 use Humble23\CartolaFcClient\Api\Api;
 
-class Team extends Api
+class Teams extends Api
 {
-    public function teams($teamName = '')
+    public function all($teamName = '')
     {
         return $this->get('times', [
             'q' => $teamName
         ]);
     }
 
-    public function team($teamSlug, $round = '')
+    public function find($teamSlug, $round = '')
     {
         $path = sprintf('times/%s/%s', $teamSlug, $round);
         return $this->get($path);
