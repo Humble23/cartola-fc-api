@@ -8,7 +8,6 @@ class ResponseTransform
 {
     protected $client;
 
-
     public function __construct($client)
     {
         $this->client = $client;
@@ -23,6 +22,7 @@ class ResponseTransform
                 return json_decode($response, true);
             case 'xml':
                 $xml_data = new SimpleXMLElement('<?xml version="1.0"?><data></data>');
+
                 return $this->array_to_xml(json_decode($response, true), $xml_data);
             default:
                 throw new \Exception('Invalid response type');

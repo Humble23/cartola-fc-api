@@ -9,13 +9,14 @@ class Teams extends Api
     public function all($teamName = '')
     {
         return $this->get('times', [
-            'q' => $teamName
+            'q' => $teamName,
         ]);
     }
 
     public function find($teamSlug, $round = '')
     {
         $path = sprintf('times/%s/%s', $teamSlug, $round);
+
         return $this->get($path);
     }
 
