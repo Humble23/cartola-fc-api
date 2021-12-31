@@ -2,6 +2,7 @@
 
 namespace Humble23\CartolaFcClient\Api;
 
+use Closure;
 use Humble23\CartolaFcClient\CartolaClient;
 use Humble23\CartolaFcClient\Utils\ResponseTransform;
 
@@ -31,5 +32,15 @@ class Api
             ->transform($response->getBody()->getContents());
 
         return $response;
+    }
+
+    public function withTemporaryReturnType(Closure $callback, $type = 'array')
+    {
+        $lastResponseType = $this->client->getResponseType();
+        $this->client->setResponseType($type);
+        $return = $callback($this);
+        $this->client->setResponseType($lastResponseType);
+
+        return $return;
     }
 }

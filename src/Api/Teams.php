@@ -8,14 +8,14 @@ class Teams extends Api
 {
     public function all($teamName = '')
     {
-        return $this->get('times', [
+        return $this->get('/times', [
             'q' => $teamName,
         ]);
     }
 
     public function find($teamSlug, $round = '')
     {
-        $path = sprintf('times/%s/%s', $teamSlug, $round);
+        $path = sprintf('/times/%s/%s', $teamSlug, $round);
 
         return $this->get($path);
     }

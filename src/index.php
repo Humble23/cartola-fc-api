@@ -4,5 +4,5 @@ require_once 'vendor/autoload.php';
 
 use Humble23\CartolaFcClient\CartolaClient;
 
-$client = new CartolaClient('array');
-dd($client->teams()->all('teste'));
+$client = new CartolaClient('json');
+dd($client->game()->currentRound());
