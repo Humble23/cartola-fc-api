@@ -3,8 +3,8 @@
 namespace Humble23\CartolaFcClient;
 
 use GuzzleHttp\Client;
-use Humble23\CartolaFcClient\Api\Teams;
 use Humble23\CartolaFcClient\Api\Market;
+use Humble23\CartolaFcClient\Api\Teams;
 
 class CartolaClient
 {
