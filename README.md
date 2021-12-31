@@ -1,8 +1,8 @@
-# :package_description
+# PHP API client for cartola fc
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![Tests](https://github.com/:vendor_slug/:package_slug/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/:vendor_slug/:package_slug/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/humble23/cartola-fc-api.svg?style=flat-square)](https://packagist.org/packages/humble23/cartola-fc-api)
+[![Tests](https://github.com/humble23/cartola-fc-api/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/humble23/cartola-fc-api/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/humble23/cartola-fc-api.svg?style=flat-square)](https://packagist.org/packages/humble23/cartola-fc-api)
 <!--delete-->
 ---
 This package can be used as to scaffold a framework agnostic package. Follow these steps to get started:
@@ -28,7 +28,7 @@ We highly appreciate you sending us a postcard from your hometown, mentioning wh
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require humble23/cartola-fc-api
 ```
 
 ## Usage

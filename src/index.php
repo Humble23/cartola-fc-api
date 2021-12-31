@@ -6,3 +6,4 @@ use Humble23\CartolaFcClient\CartolaClient;
 
 $client = new CartolaClient();
 
+dd($client->market()->highlights());

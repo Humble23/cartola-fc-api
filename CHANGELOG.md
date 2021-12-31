@@ -6,3 +6,4 @@ All notable changes to `cartola-fc-api` will be documented in this file.
 
 - initial release
 - Added Guzzle Http Client
+- Added Classe with market endpoints
