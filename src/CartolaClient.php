@@ -14,10 +14,12 @@ class CartolaClient
 
     /** @var ResponseInterface|null */
     protected $lastResponse;
+    protected $responseType;
 
-    public function __construct($client = null)
+    public function __construct($responseType = 'json', $client = null)
     {
         $this->httpClient = $client ?? new Client(['base_uri' => self::BASE_URI]);
+        $this->responseType = $responseType;
     }
 
     public function getHttpClient()
@@ -28,6 +30,16 @@ class CartolaClient
     public function setLastResponse($response)
     {
         $this->lastResponse = $response;
+    }
+
+    public function setResponseType($responseType)
+    {
+        $this->responseType = $responseType;
+    }
+
+    public function getResponseType()
+    {
+        return $this->responseType;
     }
 
     public function market()

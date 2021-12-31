@@ -16,6 +16,7 @@
     ],
     "require": {
         "php": "^7.4",
+        "ext-SimpleXML": "*",
         "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {

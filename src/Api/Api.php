@@ -3,6 +3,7 @@
 namespace Humble23\CartolaFcClient\Api;
 
 use Humble23\CartolaFcClient\CartolaClient;
+use Humble23\CartolaFcClient\Utils\ResponseTransform;
 
 class Api
 {
@@ -26,7 +27,9 @@ class Api
             'query' => $query
         ]);
         $this->client->setLastResponse($response);
+        $response = (new ResponseTransform($this->client))
+            ->transform($response->getBody()->getContents());
 
-        return $response->getBody()->getContents();
+        return $response;
     }
 }
