@@ -1,68 +1,77 @@
-# PHP API client for cartola fc
+# Um cliente de API simples em PHP para CartolaFC
 
-<!-- https://api.cartolafc.globo.com/atletas/pontuados/{rodada} -->
+<!-- [![Build Status](https://travis-ci.com/codenix-sv/coingecko-api.svg?branch=master)](https://travis-ci.com/codenix-sv/coingecko-api)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/codenix-sv/coingecko-api/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/codenix-sv/coingecko-api/?branch=master)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/650015976f280641822a/test_coverage)](https://codeclimate.com/github/codenix-sv/coingecko-api/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/650015976f280641822a/maintainability)](https://codeclimate.com/github/codenix-sv/coingecko-api/maintainability)
+[![License: MIT](https://img.shields.io/github/license/codenix-sv/coingecko-api)](https://github.com/codenix-sv/coingecko-api/blob/master/LICENSE) -->
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/humble23/cartola-fc-api.svg?style=flat-square)](https://packagist.org/packages/humble23/cartola-fc-api)
-[![Tests](https://github.com/humble23/cartola-fc-api/actions/workflows/run-tests.yml/badge.svg?branch=main)](https://github.com/humble23/cartola-fc-api/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/humble23/cartola-fc-api.svg?style=flat-square)](https://packagist.org/packages/humble23/cartola-fc-api)
-<!--delete-->
----
-This package can be used as to scaffold a framework agnostic package. Follow these steps to get started:
+![image info](./cartola-fc-logo.png)
 
-1. Press the "Use template" button at the top of this repo to create a new repo with the contents of this skeleton
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
-<!--/delete-->
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
+Um cliente de API simples, escrito com PHP para [CartolaFC/](https://ge.globo.com/cartola-fc/).
 
-## Support us
+Cartola FC é um jogo do site da Globo criado em 2005. O game é do estilo "Footbaal Manager" e "Fantasy", nele você comanda seu próprio clube, escala os jogadores e técnicos com base no que acontece na vida real dentro de campo. Por meio de pontuações que levam o nome de 'scouts', o jogador escolhe aqueles jogadores que apresentam bom rendimento e pontos na partida, que são transferidos para o Cartola. 
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/cartola-fc-api.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/cartola-fc-api)
+O jogo do Cartola acontece durante todo o Campeonato Brasileiro, gerando pontuações para os jogadores, que podem criar e participar de ligas com os amigos. Nas graças do povo, o jogo é muito popular entre os fanáticos pelo futebol.
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+## Requisitos
 
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+* PHP >= 7.4
+* ext-json
 
-## Installation
+## Instalação
 
-You can install the package via composer:
+A maneira preferida de instalar esta extensão é por meio [composer](http://getcomposer.org/download/).
+
+Ou rode
 
 ```bash
-composer require humble23/cartola-fc-api
+$ composer require humble23/cartola-fc-api
+```
+or add
+
+```json
+"humble23/cartola-fc-api": "^1.0"
+```
+## Uso básico
+
+### Exemplo
+```php
+use Humble23\CartolaFcClient\CartolaClient;
+
+$client = new CartolaClient();
+$response = $client->market()->status();
 ```
 
-## Usage
+Para obter a última resposta (`ResponseInterface::class`) use o método `getLastResponse`:
+```php
+use Humble23\CartolaFcClient\CartolaClient;
+
+$client = new CartolaClient();
+$data = $client->market()->isGameOver();
+$response = $client->getLastResponse();
+```
+
+## Métodos disponíveis
+
+### Market
+
+#### Status
+
+Checa as informações atual do mercado
 
 ```php
-$skeleton = new VendorName\Skeleton();
-echo $skeleton->echoPhrase('Hello, VendorName!');
+$data = $client->market()->status();
 ```
 
-## Testing
+#### IsGameOver
 
-```bash
-composer test
+Verifica se a temporada atual já encerrou
+
+```php
+$data = $client->market()->IsGameOver();
 ```
 
-## Changelog
+## Licença
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
-## Security Vulnerabilities
-
-Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
-
-## Credits
-
-- [:author_name](https://github.com/:author_username)
-- [All Contributors](../../contributors)
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+`humble23/cartola-fc-api` é lançado sob a licença do MIT. Veja o pacote [LICENSE](./LICENSE) para detalhes.
