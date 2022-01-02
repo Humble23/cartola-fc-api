@@ -8,7 +8,7 @@
 
 ![image info](./cartola-fc-logo.png)
 
-Um cliente de API simples, escrito com PHP para [CartolaFC/](https://ge.globo.com/cartola-fc/).
+Um cliente de API simples, escrito com PHP para [CartolaFC](https://ge.globo.com/cartola-fc/).
 
 Cartola FC é um jogo do site da Globo criado em 2005. O game é do estilo "Footbaal Manager" e "Fantasy", nele você comanda seu próprio clube, escala os jogadores e técnicos com base no que acontece na vida real dentro de campo. Por meio de pontuações que levam o nome de 'scouts', o jogador escolhe aqueles jogadores que apresentam bom rendimento e pontos na partida, que são transferidos para o Cartola. 
 
@@ -21,14 +21,14 @@ O jogo do Cartola acontece durante todo o Campeonato Brasileiro, gerando pontua�
 
 ## Instalação
 
-A maneira preferida de instalar esta extensão é por meio [composer](http://getcomposer.org/download/).
+A maneira preferida de instalar este pacote é por meio do [composer](http://getcomposer.org/download/).
 
-Ou rode
+Rode
 
 ```bash
 $ composer require humble23/cartola-fc-api
 ```
-or add
+Ou Adicione
 
 ```json
 "humble23/cartola-fc-api": "^1.0"
