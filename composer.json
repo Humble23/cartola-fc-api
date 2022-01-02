@@ -31,7 +31,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Humble23\\CartolaFcClientTests\\": "tests"
+            "Humble23\\CartolaFcClient\\Tests\\": "tests"
         }
     },
     "scripts": {

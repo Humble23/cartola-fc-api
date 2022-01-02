@@ -8,9 +8,13 @@ All notable changes to `cartola-fc-api` will be documented in this file.
 - Added Guzzle Http Client
 - Added Classe with market endpoints
 
-## 1.0.0 - 2022-12-31
+## 0.6.0 - 2021-12-31
 
 - Added Classe with teams endpoints
 - Added Classe to transform api response
 - Added Classe with game endpoints
 - Added Classe with leagues endpoints
+
+# 0.6.1 - 2022-01-01
+
+- Added game api automated tests
