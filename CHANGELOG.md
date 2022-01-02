@@ -18,3 +18,4 @@ All notable changes to `cartola-fc-api` will be documented in this file.
 # 0.6.1 - 2022-01-01
 
 - Added game api automated tests
+- Started readme package documentation
