@@ -1,8 +1,8 @@
 <?php
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Middleware;
 use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Middleware;
 use Humble23\CartolaFcClient\CartolaClient;
 
 function mockApiClient()

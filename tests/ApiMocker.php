@@ -5,12 +5,10 @@ declare(strict_types=1);
 namespace Humble23\CartolaFcClient\Tests;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Middleware;
 use GuzzleHttp\HandlerStack;
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\Handler\MockHandler;
-use Psr\Http\Message\RequestInterface;
+use GuzzleHttp\Middleware;
 use Humble23\CartolaFcClient\CartolaClient;
+use Psr\Http\Message\RequestInterface;
 
 class ApiMocker
 {
