@@ -17,9 +17,4 @@ class Teams extends Api
 
         return $this->get($path);
     }
-
-    public function highlights()
-    {
-        return $this->get('/mercado/destaques');
-    }
 }

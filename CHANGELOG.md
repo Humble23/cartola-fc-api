@@ -15,7 +15,13 @@ All notable changes to `cartola-fc-api` will be documented in this file.
 - Added Classe with game endpoints
 - Added Classe with leagues endpoints
 
-# 0.6.1 - 2022-01-01
+# 0.7.0 - 2022-01-01
 
 - Added game api automated tests
 - Started readme package documentation
+
+# 0.8.0 - 2022-01-04
+
+- Added league api automated tests
+- Added market api automated tests
+- Added teams api automated tests
