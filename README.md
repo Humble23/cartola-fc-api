@@ -31,7 +31,7 @@ $ composer require humble23/cartola-fc-api
 Ou Adicione
 
 ```json
-"humble23/cartola-fc-api": "^1.1"
+"humble23/cartola-fc-api": "^1.2"
 ```
 ## Uso básico
 
