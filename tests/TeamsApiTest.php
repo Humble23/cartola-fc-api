@@ -2,25 +2,34 @@
 
 use Humble23\CartolaFcClient\Tests\ApiMocker;
 
-it('Can list all teams', function () {
+it('can list all teams', function () {
     $apiMocker = (new ApiMocker());
     $client = $apiMocker->getMockClient();
     $value = $client->teams()->all();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartolafc.globo.com/times?q=');
+        ->toBe('https://api.cartola.globo.com/times?q=');
 
     expect($value)->toBeJson();
 });
 
-it('Can find a team', function () {
+it('can find a team', function () {
     $apiMocker = (new ApiMocker());
     $slug = 'teste';
     $client = $apiMocker->getMockClient();
     $value = $client->teams()->find($slug);
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe("https://api.cartolafc.globo.com/times/$slug/");
+        ->toBe("https://api.cartola.globo.com/times");
+
+    expect($value)->toBeJson();
+});
+
+it('can find team athletes', function () {
+    $apiMocker = (new ApiMocker());
+    $slug = 'teste';
+    $client = $apiMocker->getMockClient();
+    $value = $client->teams()->athletes($slug);
 
     expect($value)->toBeJson();
 });

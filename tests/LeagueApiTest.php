@@ -8,7 +8,7 @@ it('Can list all leagues', function () {
     $value = $client->leagues()->all();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartolafc.globo.com/ligas?q=');
+        ->toBe('https://api.cartola.globo.com/ligas?q=');
 
     expect($value)->toBeJson();
 });

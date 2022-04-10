@@ -11,7 +11,7 @@ function mockApiClient()
     $stack = HandlerStack::create();
     $stack->push($history);
 
-    $clientHttp = new Client(['base_uri' => 'https://api.cartolafc.globo.com', 'handler' => $stack]);
+    $clientHttp = new Client(['base_uri' => 'https://api.cartola.globo.com', 'handler' => $stack]);
 
     return (new CartolaClient('json', $clientHttp));
 }

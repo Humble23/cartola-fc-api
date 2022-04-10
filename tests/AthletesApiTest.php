@@ -2,24 +2,24 @@
 
 use Humble23\CartolaFcClient\Tests\ApiMocker;
 
-it('can list market informations', function () {
+it('can list athletes market', function () {
     $apiMocker = (new ApiMocker());
     $client = $apiMocker->getMockClient();
-    $value = $client->market()->status();
+    $value = $client->athletes()->market();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartola.globo.com/mercado/status');
+        ->toBe('https://api.cartola.globo.com/atletas/mercado');
 
     expect($value)->toBeJson();
 });
 
-it('can list market highlights', function () {
+it('can list athletes score', function () {
     $apiMocker = (new ApiMocker());
     $client = $apiMocker->getMockClient();
-    $value = $client->market()->highlights();
+    $value = $client->athletes()->score();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartola.globo.com/mercado/destaques');
+        ->toBe('https://api.cartola.globo.com/atletas/pontuados');
 
     expect($value)->toBeJson();
 });
