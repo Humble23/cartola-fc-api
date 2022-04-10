@@ -30,11 +30,10 @@ class Api
                 'query' => $query,
             ]);
         } catch (RequestException $e) {
-            if ($e->hasResponse()){
+            if ($e->hasResponse()) {
                 $response = $e->getResponse();
             }
         } catch (\Exception $e) {
-
         }
         $this->client->setLastResponse($response);
         $response = (new ResponseTransform($this->client))
