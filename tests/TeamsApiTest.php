@@ -8,7 +8,7 @@ it('can list all teams', function () {
     $value = $client->teams()->all();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartola.globo.com/times?q=');
+        ->toBe('https://api.cartola.globo.com/times');
 
     expect($value)->toBeJson();
 });
