@@ -6,8 +6,8 @@ class Leagues extends Api
 {
     public function all($leagueName = '')
     {
-        return $this->get('/ligas', [
-            'q' => $leagueName,
-        ]);
+        $path = sprintf('/ligas?q=%s', $leagueName);
+
+        return $this->get($path);
     }
 }

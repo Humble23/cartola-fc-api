@@ -20,7 +20,7 @@ it('can find a team', function () {
     $value = $client->teams()->find($slug);
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe("https://api.cartola.globo.com/times");
+        ->toBe("https://api.cartola.globo.com/times?q=$slug");
 
     expect($value)->toBeJson();
 });
