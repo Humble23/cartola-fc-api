@@ -26,9 +26,7 @@ class Api
     public function get(string $uri, array $query = [])
     {
         try {
-            $response = $this->client->getHttpClient()->request('GET', $uri, [
-                'query' => $query,
-            ]);
+            $response = $this->client->getHttpClient()->request('GET', $uri);
         } catch (RequestException $e) {
             if ($e->hasResponse()) {
                 $response = $e->getResponse();
