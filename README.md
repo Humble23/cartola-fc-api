@@ -64,12 +64,108 @@ Checa as informações atual do mercado
 $data = $client->market()->status();
 ```
 
-#### IsGameOver
+#### Highlights
 
-Verifica se a temporada atual já encerrou
+Lista os destaques do mercado
 
 ```php
-$data = $client->market()->IsGameOver();
+$data = $client->market()->highlights();
+```
+
+### Game
+
+#### Rounds
+
+Lista as rodadas da temporada
+
+```php
+$data = $client->game()->rounds();
+```
+
+#### Clubs
+
+Lista todos clubes da temporada
+
+```php
+$data = $client->game()->clubs();
+```
+
+#### Sponsors
+
+Lista todos os patrocinadores
+
+```php
+$data = $client->game()->sponsors();
+```
+
+#### IsGameOver
+
+Verifica se a temporada terminou
+
+```php
+$data = $client->game()->isGameOver();
+```
+
+#### CurrentRound
+
+Verifica qual a atual rodada da temporada
+
+```php
+$data = $client->game()->currentRound();
+```
+
+### Leagues
+
+#### All
+
+Lista todas as ligas da temporada
+
+```php
+$data = $client->leagues()->all();
+```
+
+### Teams
+
+#### All
+
+Lista todos os times do cartola
+
+```php
+$data = $client->teams()->all();
+```
+
+#### Find
+
+Pesquisa por um time apartir do seu nome
+
+```php
+$data = $client->teams()->find('team_name');
+```
+
+#### Athletes
+
+Lista os atletas de um time por rodada
+
+```php
+$data = $client->teams()->athletes('team_id', 'round_number');
+```
+
+### Athletes
+
+#### Market
+
+Lista os atletas no mercado
+
+```php
+$data = $client->athletes()->market();
+```
+
+#### Score
+
+Lista os atletas pontuados da rodada atual
+
+```php
+$data = $client->athletes()->score();
 ```
 
 ## Licença
