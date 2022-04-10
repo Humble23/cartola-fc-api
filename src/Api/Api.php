@@ -3,6 +3,7 @@
 namespace Humble23\CartolaFcClient\Api;
 
 use Closure;
+use GuzzleHttp\Exception\RequestException;
 use Humble23\CartolaFcClient\CartolaClient;
 use Humble23\CartolaFcClient\Utils\ResponseTransform;
 
@@ -24,9 +25,16 @@ class Api
      */
     public function get(string $uri, array $query = [])
     {
-        $response = $this->client->getHttpClient()->request('GET', $uri, [
-            'query' => $query,
-        ]);
+        try {
+            $response = $this->client->getHttpClient()->request('GET', $uri, [
+                'query' => $query,
+            ]);
+        } catch (RequestException $e) {
+            if ($e->hasResponse()) {
+                $response = $e->getResponse();
+            }
+        } catch (\Exception $e) {
+        }
         $this->client->setLastResponse($response);
         $response = (new ResponseTransform($this->client))
             ->transform($response->getBody()->getContents());

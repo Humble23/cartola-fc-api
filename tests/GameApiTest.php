@@ -12,7 +12,7 @@ it('can check if is game over', function () {
     $value = $client->game()->isGameOver();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartolafc.globo.com/mercado/status');
+        ->toBe('https://api.cartola.globo.com/mercado/status');
 
     expect($value)->toBeBool();
 });
@@ -23,7 +23,7 @@ it('can check current game round', function () {
     $value = $client->game()->currentRound();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartolafc.globo.com/mercado/status');
+        ->toBe('https://api.cartola.globo.com/mercado/status');
 
     expect($value)->toBeInt();
 });
@@ -34,17 +34,7 @@ it('can check game rounds', function () {
     $value = $client->game()->rounds();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartolafc.globo.com/rodadas');
-});
-
-it('can check game round', function () {
-    $round = rand(1, 38);
-    $apiMocker = (new ApiMocker());
-    $client = $apiMocker->getMockClient();
-    $client->game()->round($round);
-
-    expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartolafc.globo.com/rodadas/' . $round);
+        ->toBe('https://api.cartola.globo.com/rodadas');
 });
 
 it('can check game clubs', function () {
@@ -53,7 +43,7 @@ it('can check game clubs', function () {
     $client->game()->clubs();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartolafc.globo.com/clubs');
+        ->toBe('https://api.cartola.globo.com/clubes');
 });
 
 it('can check game sponsors', function () {
@@ -62,5 +52,5 @@ it('can check game sponsors', function () {
     $client->game()->sponsors();
 
     expect($apiMocker->getLastRequest()->getUri()->__toString())
-        ->toBe('https://api.cartolafc.globo.com/patrocinadores');
+        ->toBe('https://api.cartola.globo.com/patrocinadores');
 });

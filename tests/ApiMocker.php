@@ -12,7 +12,7 @@ use Psr\Http\Message\RequestInterface;
 
 class ApiMocker
 {
-    protected const BASE_URI = 'https://api.cartolafc.globo.com';
+    protected const BASE_URI = 'https://api.cartola.globo.com';
     private $transactions = [];
     private $mockClient = null;
 

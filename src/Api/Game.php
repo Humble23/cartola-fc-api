@@ -15,23 +15,13 @@ class Game extends Api
     }
 
     /**
-     * Get the current round.
-     *
-     * @return json|array|xml
-     */
-    public function round($round)
-    {
-        return $this->get('/rodadas/' . $round);
-    }
-
-    /**
      * List all clubs.
      *
      * @return json|array|xml
      */
     public function clubs()
     {
-        return $this->get('/clubs');
+        return $this->get('/clubes');
     }
 
     /**

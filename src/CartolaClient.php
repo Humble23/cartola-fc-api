@@ -3,6 +3,7 @@
 namespace Humble23\CartolaFcClient;
 
 use GuzzleHttp\Client;
+use Humble23\CartolaFcClient\Api\Athletes;
 use Humble23\CartolaFcClient\Api\Game;
 use Humble23\CartolaFcClient\Api\Leagues;
 use Humble23\CartolaFcClient\Api\Market;
@@ -10,7 +11,7 @@ use Humble23\CartolaFcClient\Api\Teams;
 
 class CartolaClient
 {
-    protected const BASE_URI = 'https://api.cartolafc.globo.com';
+    protected const BASE_URI = 'https://api.cartola.globo.com';
 
     /** @var Client */
     private $httpClient;
@@ -19,9 +20,11 @@ class CartolaClient
     protected $lastResponse;
     protected $responseType;
 
-    public function __construct($responseType = 'json', $client = null)
+    public function __construct($responseType = 'array', $client = null)
     {
-        $this->httpClient = $client ?? new Client(['base_uri' => self::BASE_URI]);
+        $this->httpClient = $client ?? new Client([
+            'base_uri' => self::BASE_URI,
+        ]);
         $this->responseType = $responseType;
     }
 
@@ -63,5 +66,10 @@ class CartolaClient
     public function leagues()
     {
         return (new Leagues($this));
+    }
+
+    public function athletes()
+    {
+        return (new Athletes($this));
     }
 }
